@@ -116,6 +116,7 @@
         position: relative;
         @media (min-width: 320px) and (max-width: 1023px) {
             height: 60px;
+            margin: 0 0 20px;
         }
         @media (min-width: 1024px) and (max-width: 1280px) {
             padding: 0 20px;
@@ -417,11 +418,20 @@
 
         .m-contact-list {
             border-right: 1px solid #E0E0E0;
+            .heading {
+                @media (min-width: 320px) and (max-width: 1023px) {
+                    padding: 0 10px;
+                    height: 60px;
+                }
+            }
             .contact-container {
                 padding-right: 12px;
                 padding: 0 0 30px;
                 overflow-y: auto;
                 height: calc(100vh - 206px);
+                @media (min-width: 320px) and (max-width: 1023px) {
+                    height: calc(100vh - 160px);
+                }
                 .overflow-eclips {
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -438,6 +448,10 @@
                     border-bottom: 1px solid #E0E0E0;
                     align-items: center;
                     padding-right: 10px;
+                    @media (min-width: 320px) and (max-width: 1023px) {
+                        min-height: 85px;
+                        padding-left: 10px;
+                    }
                     .user-detail {
                         grid-template-columns: auto 17px 1fr 12px 52px;
                         grid-gap: 4.45px 0;
@@ -452,6 +466,11 @@
                             padding-top: 0px;
                             font-size: 13.59px;
                             color: #A0A0A0;
+                        }
+                        .empty-grid-item {
+                            @media (min-width: 320px) and (max-width: 1023px) {
+                                display: block;
+                            }
                         }
                     }
                     .message-time-detail {
@@ -488,12 +507,18 @@
                         width: 5.83px;
                         height: 100%;
                         background-color: #0BB783;
+                        @media (min-width: 320px) and (max-width: 1023px) {
+                            width: 3px;
+                        }
                     }
                 }
             }
         }
 
         .m-message-detail {
+            @media (min-width: 320px) and (max-width: 1023px) {
+                display: none;
+            }
             .heading {
                 display: grid;
                 grid-template-columns: 1fr 292.28px 25.25px;

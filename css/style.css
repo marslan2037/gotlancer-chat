@@ -96,7 +96,8 @@
     /* DISPLAY MOBILE MENU ON MOBILE AND TABLET SCREEN */ }
     @media (min-width: 320px) and (max-width: 1023px) {
       .main-container header {
-        height: 60px; } }
+        height: 60px;
+        margin: 0 0 20px; } }
     @media (min-width: 1024px) and (max-width: 1280px) {
       .main-container header {
         padding: 0 20px; } }
@@ -325,11 +326,18 @@
         font-size: 13.59px; }
     .main-container .messages-container .m-contact-list {
       border-right: 1px solid #E0E0E0; }
+      @media (min-width: 320px) and (max-width: 1023px) {
+        .main-container .messages-container .m-contact-list .heading {
+          padding: 0 10px;
+          height: 60px; } }
       .main-container .messages-container .m-contact-list .contact-container {
         padding-right: 12px;
         padding: 0 0 30px;
         overflow-y: auto;
         height: calc(100vh - 206px); }
+        @media (min-width: 320px) and (max-width: 1023px) {
+          .main-container .messages-container .m-contact-list .contact-container {
+            height: calc(100vh - 160px); } }
         .main-container .messages-container .m-contact-list .contact-container .overflow-eclips {
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -344,6 +352,10 @@
           border-bottom: 1px solid #E0E0E0;
           align-items: center;
           padding-right: 10px; }
+          @media (min-width: 320px) and (max-width: 1023px) {
+            .main-container .messages-container .m-contact-list .contact-container .single-contact {
+              min-height: 85px;
+              padding-left: 10px; } }
           .main-container .messages-container .m-contact-list .contact-container .single-contact .user-detail {
             grid-template-columns: auto 17px 1fr 12px 52px;
             grid-gap: 4.45px 0; }
@@ -356,6 +368,9 @@
               padding-top: 0px;
               font-size: 13.59px;
               color: #A0A0A0; }
+            @media (min-width: 320px) and (max-width: 1023px) {
+              .main-container .messages-container .m-contact-list .contact-container .single-contact .user-detail .empty-grid-item {
+                display: block; } }
           .main-container .messages-container .m-contact-list .contact-container .single-contact .message-time-detail {
             display: grid;
             grid-gap: 8px; }
@@ -385,6 +400,12 @@
             width: 5.83px;
             height: 100%;
             background-color: #0BB783; }
+            @media (min-width: 320px) and (max-width: 1023px) {
+              .main-container .messages-container .m-contact-list .contact-container .single-contact.active:before {
+                width: 3px; } }
+    @media (min-width: 320px) and (max-width: 1023px) {
+      .main-container .messages-container .m-message-detail {
+        display: none; } }
     .main-container .messages-container .m-message-detail .heading {
       display: grid;
       grid-template-columns: 1fr 292.28px 25.25px;

@@ -363,7 +363,7 @@
         display: grid;
         grid-template-columns: 339.86px 1fr;
         @media (min-width: 320px) and (max-width: 1023px) {
-            margin: 0 15px;
+            margin: 0;
             grid-template-columns: 1fr;
         }
         .heading {
@@ -373,6 +373,12 @@
             border-bottom: 1px solid #E0E0E0;
             display: grid;
             align-items: center;
+            @media (min-width: 320px) and (max-width: 767px) {
+                padding: 0 12px;
+            }
+            @media (min-width: 768px) and (max-width: 1023px) {
+                padding: 0 15px;
+            }
         }
         .user-detail {
             display: grid;
@@ -418,6 +424,9 @@
 
         .m-contact-list {
             border-right: 1px solid #E0E0E0;
+            @media (min-width: 320px) and (max-width: 767px) {
+                display: none;
+            }
             .heading {
                 @media (min-width: 320px) and (max-width: 1023px) {
                     padding: 0 10px;
@@ -516,13 +525,20 @@
         }
 
         .m-message-detail {
-            @media (min-width: 320px) and (max-width: 1023px) {
-                display: none;
-            }
             .heading {
                 display: grid;
                 grid-template-columns: 1fr 292.28px 25.25px;
                 grid-gap: 85px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-template-columns: 1fr 25px;
+                    height: 60px;
+                    grid-gap: 25px;
+                }
+                .user-detail {
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        display: none;
+                    }
+                }
                 .search-bar {
                     justify-self: end;
                 }
@@ -562,16 +578,30 @@
             }
 
             .messages-body-detail {
+                @media (min-width: 320px) and (max-width: 767px) {
+                    padding: 0 !important;
+                }
                 .complete-messages-list {
                     padding: 10px 15.51px 10px 20.15px;
                     overflow-y: auto;
                     height: calc(100vh - 286px);
                     border-right: 1px solid #E0E0E0;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        padding: 0;
+                        border: none;
+                        height: calc(100vh - 195px);
+                    }
                     .single-message {
                         padding: 16.02px;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            padding: 10px;
+                        }
                         &:hover {
                             background: #F4F7F9;
                             border-radius: 12px;
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                border-radius: 0;
+                            }
                             .user-detail {
                                 .message-time-detail {
                                     .settings-icon {
@@ -582,6 +612,9 @@
                         }
                         .user-detail {
                             grid-template-columns: auto 1fr 52px;
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                grid-gap: 10px 12px;
+                            }
                             .message-time-detail {
                                 display: grid;
                                 grid-gap: 8px;
@@ -595,11 +628,22 @@
                                     display: none;
                                     bottom: -40px;
                                     cursor: pointer;
+                                    @media (min-width: 320px) and (max-width: 767px) {
+                                        display: block;
+                                        bottom: -24px;
+                                        width: 18px;
+                                        justify-self: end;
+                                    }
                                     &:hover {
                                         .c-dropdown-menu {
                                             .dropdown-content {
                                                 display: block;
                                             }
+                                        }
+                                    }
+                                    img {
+                                        @media (min-width: 320px) and (max-width: 767px) {
+                                            width: 100%;
                                         }
                                     }
                                     .c-dropdown-menu {
@@ -660,6 +704,10 @@
                         .each-message {
                             padding: 0 0 0 68px;
                             margin: -10px 0 0;
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                padding: 0 0 0 60px;
+                                margin: -5px 0 0;
+                            }
                         }
                     }
                 }
@@ -753,27 +801,42 @@
             .messages-body-detail.have-grid, .messages-footer.have-grid {
                 display: grid;
                 grid-template-columns: 1fr 400px;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                    padding: 8px 10px;
+                }
             }
 
             .messages-footer {
                 height: 79.63px;
                 background-color: #F9F9F9;
                 padding: 12px 10px 12px 83px;
-                // display: grid;
-                // grid-template-columns: auto 1fr 137.89px;
-                // grid-gap: 18.56px;
-                // align-items: center;
-                // grid-template-rows: 56.63px;
                 border-top: 1px solid #E0E0E0;
+                @media (min-width: 320px) and (max-width: 767px) {
+                    height: 55px;
+                }
                 div.footer-chat-content {
                     display: grid;
                     grid-template-columns: auto 1fr 137.89px;
                     grid-gap: 18.56px;
                     align-items: center;
                     grid-template-rows: 56.63px;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        grid-template-columns: auto 1fr 60px;
+                        grid-template-rows: 38px;
+                        grid-gap: 10px;
+                    }
                 }
                 .attatchment-icon {
                     cursor: pointer;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        width: 16px;
+                        img {
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
                 .user-message-box {
                     position: relative;
@@ -786,6 +849,9 @@
                         grid-template-columns: auto auto;
                         grid-gap: 12px;
                         align-items: center;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            display: none;
+                        }
                         span {
                             position: relative;
                             cursor: pointer;
@@ -858,6 +924,9 @@
                     outline: none;
                     font-size: 14px;
                     padding: 0 90px 0 15px;
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        padding: 0 10px;
+                    }
                 }
                 button {
                     outline: none;
@@ -873,6 +942,9 @@
         }
 
         .m-files-section {
+            @media (min-width: 320px) and (max-width: 767px) {
+                display: none;
+            }
             .heading {
                 border-right: none;
             }
